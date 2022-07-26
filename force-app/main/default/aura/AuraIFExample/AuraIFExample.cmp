@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name = "PLS" type="boolean" default="false"/>
+    <aura:if isTrue="{!v.PLS}" >
+        Welcome to PLS!
+        
+        <aura:set attribute="else">
+            Welcome to Premium Learnings System!
+        </aura:set>
+    </aura:if>
+</aura:component>

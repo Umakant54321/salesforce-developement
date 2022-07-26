@@ -1,0 +1,21 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global" controller="ServerClass">
+    
+    <lightning:card title="Umakant Employee">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-3 slds-p-top_medium slds-p-left_large slds-p-right_large">
+                <lightning:input aura:id="cname" type="text" name="input1" label="Name" placeholder="type Name here..."/>
+            </div>
+            <div class="slds-col slds-size_1-of-3 slds-p-top_medium slds-p-left_large slds-p-right_large">
+                <lightning:input aura:id="ccity" type="text" name="input2" label="City" placeholder="type city here..."/>
+            </div>
+            <div class="slds-col slds-size_1-of-3 slds-p-top_medium slds-p-left_large slds-p-right_large">
+                <lightning:input aura:id="phone" type="number" name="input3" label="Phone" placeholder="type Phone number here..."/>
+            </div>
+        </div>
+        <br/>
+        <center>
+        <lightning:button variant="brand" label="Submit" title="Brand action" onclick="{! c.ClickMe }" />
+       </center>
+    </lightning:card>
+</aura:component>

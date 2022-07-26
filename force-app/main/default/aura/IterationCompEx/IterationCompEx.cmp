@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="cities" type = "String[]" default = "['Nagpur','Palghar','Mumbai','Pune','Bangalore']"/>  
+    <center>
+        <h1>Cities are as follows :</h1>
+    </center>
+    <aura:iteration items="{!v.cities}" var="city">
+        <ul>
+            <li>{!city}</li>
+        </ul>
+    </aura:iteration>
+</aura:component>

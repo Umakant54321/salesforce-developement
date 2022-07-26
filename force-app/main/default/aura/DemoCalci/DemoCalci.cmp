@@ -1,0 +1,28 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name = "input1" type="integer" description="For the First Input"/>
+    <aura:attribute name = "input2" type="integer" description="For the Second Input"/>
+    <aura:attribute name = "output" type="integer" description="For output"/>
+    <lightning:card  title="Calculator">
+        <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-2 slds-p-left_large slds-p-right_large">
+            <lightning:input type="number" name="input1" label="Enter First number" value="{!v.input1}"/>
+        </div>
+        <div class="slds-col slds-size_1-of-2 slds-p-left_large slds-p-right_large">
+            <lightning:input type="number" name="input2" label="Enter second number" value="{!v.input2}"/>
+        </div>
+        </div>
+        <br/>
+      First Number : {!v.input1}
+        <br/>
+       Second Number :{!v.input2}
+        <br/>
+      Output Is : {!v.output}
+        <center>
+        <lightning:button variant="brand" label="Add" title="Primary action" onclick="{!c.add}" class="slds-m-left_x-small"></lightning:button>
+        <lightning:button variant="brand" label="Sub" title="Primary action" onclick="{!c.sub}" class="slds-m-left_x-small"></lightning:button>
+        <lightning:button variant="brand" label="Mul" title="Primary action" onclick="{!c.mult}" class="slds-m-left_x-small"></lightning:button>
+        <lightning:button variant="brand" label="Div" title="Primary action" onclick="{!c.div}" class="slds-m-left_x-small"></lightning:button>
+        </center>
+    </lightning:card>
+    
+</aura:component>
